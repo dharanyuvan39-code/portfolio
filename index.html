@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Yuvan T - BSc Information Technology student at KGCAS, passionate about front-end web development, HTML, CSS, and JavaScript.">
+    <title>Yuvan T | Front-End Developer Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar-wrapper">
+        <div class="navbar">
+            <a href="#home" class="logo" aria-label="Yuvan T Home">Yuvan<span>.</span></a>
+
+            <nav id="navLinks" aria-label="Main Navigation">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="talk-btn">Let's talk ↗</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="badge-wrapper">
+                    <span class="status-pulse"></span>
+                    <span class="small-title">BSc Information Technology Student</span>
+                </div>
+                <h1>Hi, I'm <span class="highlight-text">Yuvan T</span></h1>
+                <h2>Crafting thoughtful<br><span class="gradient-sub">digital experiences.</span></h2>
+
+                <p class="description">
+                    Aspiring web developer passionate about creating clean,
+                    responsive, and user-centric websites using modern HTML,
+                    CSS, and JavaScript. Currently studying at KGCAS.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#projects" class="primary-btn">
+                        View My Work <span>→</span>
+                    </a>
+                    <a href="#contact" class="secondary-btn">
+                        Get in Touch
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Web Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">KGCAS</span>
+                        <span class="stat-label">BSc IT Scholar</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Dedication</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <div class="image-glow"></div>
+                <div class="hero-image-card">
+                    <div class="image-backdrop"></div>
+                    <img src="images/photo.jpeg" alt="Yuvan T - Web Developer" width="400" height="480" fetchpriority="high">
+                    <div class="image-floating-badge">
+                        <span class="badge-icon">⚡</span>
+                        <div class="badge-text">
+                            <strong>Open to Learn</strong>
+                            <small>Frontend Development</small>
+                        </div>
+                    </div>
+                </div>
+                <span class="decoration decoration-top">✦</span>
+                <span class="decoration decoration-bottom">✳</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="section-header">
+                <p class="small-title">GET TO KNOW ME</p>
+                <h2>Curious mind. <span class="highlight-text">Creative builder.</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card intro-card">
+                    <p class="about-text">
+                        I'm <strong>Yuvan T</strong>, a dedicated BSc Information Technology student at 
+                        <strong>KG College of Arts and Science (KGCAS)</strong>. I am enthusiastic about front-end 
+                        engineering and enjoy solving real-world challenges by building practical, accessible web applications.
+                    </p>
+                    <p class="about-text secondary-text">
+                        Currently sharpening my core fundamentals in semantic HTML, modern responsive CSS layouts, and dynamic 
+                        vanilla JavaScript. My goal is to build fast, beautiful, and intuitive user experiences.
+                    </p>
+                </div>
+
+                <div class="about-card education-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Education</h3>
+                    <p class="degree-title">BSc in Information Technology</p>
+                    <p class="college-title">KG College of Arts and Science (KGCAS)</p>
+                    <span class="status-pill">Active Student</span>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-wrapper">
+                <h3 class="skills-heading">Core Technologies & Tools</h3>
+                <div class="skills">
+                    <div class="skill-tag html">
+                        <span class="skill-dot"></span>
+                        <span class="skill-name">HTML5</span>
+                    </div>
+                    <div class="skill-tag css">
+                        <span class="skill-dot"></span>
+                        <span class="skill-name">CSS3</span>
+                    </div>
+                    <div class="skill-tag javascript">
+                        <span class="skill-dot"></span>
+                        <span class="skill-name">JavaScript (ES6+)</span>
+                    </div>
+                    <div class="skill-tag responsive">
+                        <span class="skill-dot"></span>
+                        <span class="skill-name">Responsive Design</span>
+                    </div>
+                    <div class="skill-tag git">
+                        <span class="skill-dot"></span>
+                        <span class="skill-name">Git & GitHub</span>
+                    </div>
+                    <div class="skill-tag ui">
+                        <span class="skill-dot"></span>
+                        <span class="skill-name">UI/UX Principles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="section-header">
+                <p class="small-title">PORTFOLIO SHOWCASE</p>
+                <h2>Projects I'm <span class="highlight-text">building.</span></h2>
+                <p class="section-subtext">Hands-on applications designed with clean code, smooth interactions, and responsive design.</p>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card recipe">
+                    <div class="project-visual">
+                        <div class="mock-window">
+                            <div class="window-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mock-header">
+                                <span class="header-icon">🍲</span> Recipe Finder
+                            </div>
+                            <div class="food-image">🍝</div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line short"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3>Recipe Finder</h3>
+                        <p>An interactive recipe discovery web app with ingredient-based filtering, recipe cards, and nutritional highlights.</p>
+                        <div class="project-actions">
+                            <a href="#projects" class="project-link" aria-label="Recipe Finder Demo">Demo Concept ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card study">
+                    <div class="project-visual">
+                        <div class="mock-window">
+                            <div class="window-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mock-header">
+                                <span class="header-icon">📚</span> Study Planner
+                            </div>
+                            <div class="task-list">
+                                <div class="task"><span class="bullet green"></span> Complete assignments</div>
+                                <div class="task"><span class="bullet orange"></span> Revise JavaScript lessons</div>
+                                <div class="task"><span class="bullet blue"></span> Practice frontend layouts</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>CSS Grid</span>
+                            <span>LocalStorage</span>
+                        </div>
+                        <h3>Study Planner</h3>
+                        <p>A smart student productivity tool to schedule study sessions, organize assignments, and track weekly progress.</p>
+                        <div class="project-actions">
+                            <a href="#projects" class="project-link" aria-label="Study Planner Demo">Demo Concept ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card travel">
+                    <div class="project-visual">
+                        <div class="mock-window">
+                            <div class="window-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mock-header">
+                                <span class="header-icon">✈️</span> Travel Journal
+                            </div>
+                            <div class="travel-image">🏞️</div>
+                            <div class="mock-line"></div>
+                            <div class="mock-line short"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>Flexbox</span>
+                            <span>UI Design</span>
+                        </div>
+                        <h3>Travel Journal</h3>
+                        <p>A visual travel logging concept for documenting travel adventures, photo galleries, and memorable destinations.</p>
+                        <div class="project-actions">
+                            <a href="#projects" class="project-link" aria-label="Travel Journal Demo">Demo Concept ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="project-note">
+                💡 <em>Continuously building and deploying new projects. Check back regularly for live GitHub repository links and updates!</em>
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <p class="small-title">GET IN TOUCH</p>
+                    <h2>Let's build something <span class="highlight-text">extraordinary.</span></h2>
+                    <p class="contact-desc">Have a question, collaboration idea, or an opportunity? Feel free to reach out directly.</p>
+                </div>
+
+                <div class="contact-cards">
+                    <a href="mailto:yuvan.t.dev@gmail.com" class="contact-card email-card">
+                        <div class="contact-card-icon">✉️</div>
+                        <div class="contact-card-info">
+                            <span class="card-label">Send an Email</span>
+                            <span class="card-value">yuvan.t.dev@gmail.com</span>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+                    <div class="contact-card location-card">
+                        <div class="contact-card-icon">📍</div>
+                        <div class="contact-card-info">
+                            <span class="card-label">Location</span>
+                            <span class="card-value">Coimbatore, Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <a class="primary-btn" href="mailto:yuvan.t.dev@gmail.com">
+                        Email Me Directly ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="#home" class="logo">Yuvan<span>.</span></a>
+                <p>Designed & built with HTML, CSS & JavaScript.</p>
+            </div>
+            <div class="footer-center">
+                <p>© 2026 Yuvan T. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#home" class="back-to-top" aria-label="Back to top">
+                    Back to top <span>↑</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
