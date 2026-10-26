@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (menuToggle && navLinks) {
         function toggleMenu(forceClose = false) {
             const shouldOpen = forceClose ? false : !navLinks.classList.contains("open");
-            
+
             navLinks.classList.toggle("open", shouldOpen);
             menuToggle.classList.toggle("active", shouldOpen);
             menuToggle.setAttribute("aria-expanded", String(shouldOpen));
@@ -96,3 +96,128 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial check on load
     updateActiveNavLink();
 });
+
+
+
+// 3. Portfolio Feedback and Rating System
+const feedbackSection = document.getElementById("feedbackSection");
+const ratingStars = document.querySelectorAll(".rating-star");
+const ratingInput = document.getElementById("ratingValue");
+const feedbackForm = document.getElementById("feedbackForm");
+const feedbackMessage = document.getElementById("feedbackMessage");
+const feedbackList = document.getElementById("feedbackList");
+
+let selectedRating = 0;
+
+// Interactive star rating
+ratingStars.forEach((star) => {
+    star.addEventListener("mouseenter", () => {
+        const rating = Number(star.dataset.rating);
+        ratingStars.forEach((item) => {
+            item.classList.toggle(
+                "selected",
+                Number(item.dataset.rating) <= rating
+            );
+        });
+    });
+
+    star.addEventListener("click", () => {
+        selectedRating = Number(star.dataset.rating);
+
+        if (ratingInput) {
+            ratingInput.value = selectedRating;
+        }
+
+        ratingStars.forEach((item) => {
+            item.classList.toggle(
+                "selected",
+                Number(item.dataset.rating) <= selectedRating
+            );
+            item.setAttribute(
+                "aria-pressed",
+                String(Number(item.dataset.rating) === selectedRating)
+            );
+        });
+    });
+
+    star.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            star.click();
+        }
+    });
+
+    star.addEventListener("mouseleave", () => {
+        ratingStars.forEach((item) => {
+            item.classList.toggle(
+                "selected",
+                Number(item.dataset.rating) <= selectedRating
+            );
+        });
+    });
+});
+
+// Submit feedback
+if (feedbackForm) {
+    feedbackForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const nameInput = document.getElementById("feedbackName");
+        const commentInput = document.getElementById("feedbackComment");
+
+        const name = nameInput.value.trim();
+        const comment = commentInput.value.trim();
+
+        if (selectedRating === 0) {
+            feedbackMessage.textContent =
+                "Please select a star rating before submitting.";
+            feedbackMessage.className = "feedback-error";
+            return;
+        }
+
+        if (!name || !comment) {
+            feedbackMessage.textContent =
+                "Please enter your name and feedback.";
+            feedbackMessage.className = "feedback-error";
+            return;
+        }
+
+        // Create feedback card safely
+        const feedbackCard = document.createElement("article");
+        feedbackCard.className = "feedback-card";
+
+        const reviewer = document.createElement("h4");
+        reviewer.textContent = name;
+
+        const stars = document.createElement("p");
+        stars.className = "feedback-stars";
+        stars.textContent =
+            "★".repeat(selectedRating) +
+            "☆".repeat(5 - selectedRating);
+
+        const review = document.createElement("p");
+        review.textContent = comment;
+
+        feedbackCard.append(reviewer, stars, review);
+
+        if (feedbackList) {
+            feedbackList.prepend(feedbackCard);
+        }
+
+        feedbackMessage.textContent =
+            "Thank you for rating my portfolio!";
+        feedbackMessage.className = "feedback-success";
+
+        feedbackForm.reset();
+        selectedRating = 0;
+
+        if (ratingInput) {
+            ratingInput.value = "";
+        }
+
+        ratingStars.forEach((star) => {
+            star.classList.remove("selected");
+            star.setAttribute("aria-pressed", "false");
+        });
+    });
+}

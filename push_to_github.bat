@@ -5,7 +5,7 @@ echo Pushing Yuvan T's Portfolio to GitHub Repository:
 echo https://github.com/dharanyuvan39-code/portfolio.git
 echo ========================================================
 echo.
-git push origin main
+git push -u origin main
 echo.
 if %errorlevel% equ 0 (
     echo [SUCCESS] Portfolio successfully pushed to GitHub!
